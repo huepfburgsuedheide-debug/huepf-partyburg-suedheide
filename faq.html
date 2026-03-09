@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Hüpf- und Partyburg Südheide</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f1faee;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: #1d3557;
+      color: #fff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    header a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    header a:hover { color: #fff; }
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #e63946;
+    }
+    .logo span { color: #fff; }
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1d3557;
+      margin-bottom: 0.4rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #e63946;
+      margin-bottom: 2.5rem;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1d3557;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+    .faq-question:hover { background: #f8f8f8; }
+    .faq-icon {
+      font-size: 1.3rem;
+      color: #e63946;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1.3rem;
+      font-size: 0.96rem;
+      line-height: 1.75;
+      color: #444;
+      border-top: 1px solid #eee;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    a { color: #e63946; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="images/logo-freigestellt.png" alt="Hüpf- &amp; Partyburg Südheide" style="height:44px;width:auto;display:block;"></a></div>
+    <a href="index.html">&#8592; Zurück zur Startseite</a>
+  </header>
+
+  <div class="container">
+    <h1>Häufig gestellte Fragen</h1>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Was passiert bei Sach- und Personenschäden?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sach- und Personenschäden sind bei privater Miete (z.&nbsp;B. für Kindergeburtstage) in der Regel von der Privathaftpflicht- oder Haushaftpflicht-Versicherung abgedeckt.</p>
+        <p style="margin-top:0.7rem">Bei betrieblichen Veranstaltungen oder Vereinsfeiern kommt es auf die konkreten Umstände an, ob die Betriebs- oder Vereinshaftpflicht-Versicherung für einen Schaden eintreten wird. Bitte informieren Sie sich im eigenen Interesse – auch bei privater Miete – im Vorhinein bei Ihrer Versicherung, ob sie für Schäden beim Betrieb der Hüpfburg eintritt.</p>
+        <p style="margin-top:0.7rem">Bei öffentlichen Veranstaltungen ist in der Regel eine entsprechende Veranstalterhaftpflichtversicherung notwendig. Auch hier sollten Sie sich unbedingt im Vorhinein informieren.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Kann die Hüpfburg schon am Abend vor der Veranstaltung abgeholt werden?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Versprechen können wir das nicht. Wenn die Buchungsauslastung der Hüpfburgen es erlaubt, machen wir es aber gerne möglich – sprechen Sie uns einfach darauf an.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Brauchen die Hüpfburgen einen besonderen Stromanschluss?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nein, die Burgen laufen mit einem gewöhnlichen Stromanschluss (220&nbsp;V / 16&nbsp;A) für das Dauergebläse.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Muss das Gebläse durchgehend laufen?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Ja, das Gebläse muss ständig eingeschaltet sein, sonst verlieren die Hüpfburgen an Spannung.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Was darf nicht mit auf die Hüpfburg?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Schuhe, Brillen, Schmuck sowie scharfe und spitze Gegenstände. Auch Kleinigkeiten, die aus der Tasche fallen können – wie Handy, Geldbeutel, Ketten und Ähnliches – zählen hierzu.</p>
+        <p style="margin-top:0.7rem">Auf der Hüpfburg darf nicht gegessen oder getrunken werden. Getränke und Lebensmittel sind vor der Hüpfburg zu belassen.</p>
+        <p style="margin-top:0.7rem">Rauchen ist in direkter Nähe sowie auf der Hüpfburg nicht gestattet.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Müssen die Schuhe ausgezogen werden?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Ja. Schuhe können die Hüpfburgen beschädigen, z.&nbsp;B. durch Schuhschnallen oder Kanten, die hängenbleiben können. Gehüpft wird am besten auf Socken oder barfuß.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Was ist bei Regen während der Veranstaltung?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Bei den ersten Regentropfen sollten Sie die Hüpfburg von der Stromzufuhr trennen. Die Burg fällt daraufhin recht schnell in sich zusammen. Legen Sie die Burg mit dem Boden nach oben zusammen, um den Innenraum vor Regen zu schützen – eventuell mit einer Plane abdecken. Auf diese Weise kann die Hüpfburg nach dem Regen sofort wieder in Betrieb genommen werden.</p>
+        <p style="margin-top:0.7rem">Bei leichtem Nieselregen kann die Burg weiterbetrieben werden.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Wie lange sind die Liefer- und Abholzeiten?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Jederzeit nach Absprache – natürlich auch samstags, sonntags oder feiertags.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Muss die Hüpfburg vor der Rückgabe gereinigt werden?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Das gründliche Reinigen übernehmen wir für Sie. Trotzdem sollten Sie die Hüpfburg in einem sauberen und vor allem trockenen Zustand zurückgeben. Sollte das einmal nicht möglich sein, müssen wir eine Aufwandsentschädigung von 50&nbsp;€ in Rechnung stellen.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Hüpf- &amp; Partyburg Südheide &nbsp;|&nbsp;
+    <a href="index.html">Startseite</a> &nbsp;|&nbsp;
+    <a href="impressum.html">Impressum</a> &nbsp;|&nbsp;
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
