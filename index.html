@@ -1408,11 +1408,32 @@
   </div>
 
   <script>
-    // Formular Erfolgsbestätigung
-    document.querySelector('form').addEventListener('submit', function(e) {
+    // Formular absenden via Formspree
+    document.querySelector('form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('form-success').classList.add('active');
+      const form = this;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet...';
+      try {
+        const res = await fetch('https://formspree.io/f/xpqyqgpn', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').classList.add('active');
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Anfrage absenden';
+          alert('Fehler beim Senden. Bitte versuche es erneut oder schreib uns direkt per E-Mail.');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Anfrage absenden';
+        alert('Fehler beim Senden. Bitte versuche es erneut oder schreib uns direkt per E-Mail.');
+      }
     });
 
     // Stehtisch-Anzahl ein-/ausblenden
