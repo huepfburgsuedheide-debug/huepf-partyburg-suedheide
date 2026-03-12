@@ -833,7 +833,7 @@
       gap: 1rem;
     }
 
-    form input, form textarea, form select {
+    form input:not([type="checkbox"]):not([type="radio"]), form textarea, form select {
       padding: 0.85rem 1rem;
       border: 2px solid #e0e0e0;
       border-radius: 10px;
@@ -844,7 +844,7 @@
       width: 100%;
     }
 
-    form input:focus, form textarea:focus, form select:focus {
+    form input:not([type="checkbox"]):not([type="radio"]):focus, form textarea:focus, form select:focus {
       border-color: var(--primary);
     }
 
