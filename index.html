@@ -1352,6 +1352,17 @@
         <input type="tel" name="telefon" placeholder="Telefonnummer" />
         <input type="date" name="datum" placeholder="Gewünschtes Datum" />
         <div class="checkbox-group">
+          <p class="checkbox-group-label">Art der Anfrage</p>
+          <label class="checkbox-item">
+            <input type="radio" name="anfragetyp" value="Unverbindliche Anfrage">
+            <span>📋 Unverbindliche Anfrage</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="radio" name="anfragetyp" value="Reservierung (verbindlich nach Verfügbarkeitscheck)">
+            <span>📌 Reservierung (verbindliche Reservierung nach Verfügbarkeitscheck)</span>
+          </label>
+        </div>
+        <div class="checkbox-group">
           <p class="checkbox-group-label">Was interessiert dich? (Mehrfachauswahl möglich)</p>
           <label class="checkbox-item">
             <input type="checkbox" name="produkt" value="Ritterburg mit Drachenrutsche">
