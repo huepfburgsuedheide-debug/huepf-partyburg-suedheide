@@ -1389,6 +1389,20 @@
             <input type="number" id="anzahl-stehtische" name="anzahl_stehtische" min="1" max="20" value="1" style="width:80px; padding:0.4rem 0.6rem;">
           </div>
         </div>
+        <div class="checkbox-group">
+          <p class="checkbox-group-label">Abholung / Lieferung</p>
+          <label class="checkbox-item">
+            <input type="radio" name="lieferung" value="Selbstabholung" id="selbstabholung-rb" required>
+            <span>🚗 Selbstabholung</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="radio" name="lieferung" value="Lieferung" id="lieferung-rb">
+            <span>🚚 Lieferung (Preis für Lieferung &amp; Abholung auf Anfrage)</span>
+          </label>
+          <div id="lieferadresse-block" style="display:none; margin-top:0.5rem;">
+            <input type="text" name="lieferadresse" id="lieferadresse" placeholder="Lieferadresse *" style="width:100%;">
+          </div>
+        </div>
         <textarea name="nachricht" placeholder="Deine Nachricht – z.B. Anzahl Kinder, Veranstaltungsort, besondere Wünsche ..."></textarea>
         <button type="submit">Anfrage absenden</button>
       </form>
@@ -1456,6 +1470,19 @@
     stehtischCb.addEventListener('change', () => {
       stehtischCount.style.display = stehtischCb.checked ? 'flex' : 'none';
     });
+
+    // Lieferadresse ein-/ausblenden
+    const lieferungRb = document.getElementById('lieferung-rb');
+    const selbstabholungRb = document.getElementById('selbstabholung-rb');
+    const lieferadresseBlock = document.getElementById('lieferadresse-block');
+    const lieferadresseInput = document.getElementById('lieferadresse');
+    function updateLieferadresse() {
+      const show = lieferungRb.checked;
+      lieferadresseBlock.style.display = show ? 'block' : 'none';
+      lieferadresseInput.required = show;
+    }
+    lieferungRb.addEventListener('change', updateLieferadresse);
+    selbstabholungRb.addEventListener('change', updateLieferadresse);
 
     // LIGHTBOX
     const lb = document.getElementById('lightbox');
