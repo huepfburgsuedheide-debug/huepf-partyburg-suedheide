@@ -842,6 +842,14 @@
       transition: border-color 0.2s;
       outline: none;
       width: 100%;
+      background-color: #fff;
+    }
+
+    .date-label {
+      font-size: 0.82rem;
+      color: #888;
+      font-weight: 600;
+      margin-bottom: -0.4rem;
     }
 
     form input:not([type="checkbox"]):not([type="radio"]):focus, form textarea:focus, form select:focus {
@@ -1351,7 +1359,8 @@
         <input type="text" name="name" placeholder="Dein Name *" required />
         <input type="email" name="_replyto" placeholder="E-Mail-Adresse *" required />
         <input type="tel" name="telefon" placeholder="Telefonnummer" />
-        <input type="date" name="datum" placeholder="Gewünschtes Datum" />
+        <label class="date-label" for="datum">📅 Gewünschtes Datum</label>
+        <input type="date" id="datum" name="datum" />
         <div class="checkbox-group">
           <p class="checkbox-group-label">Art der Anfrage</p>
           <label class="checkbox-item">
